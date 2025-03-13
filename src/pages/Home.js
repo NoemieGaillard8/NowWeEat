@@ -8,7 +8,7 @@ const Home = () => {
 
       <div className="content">
         <header className="home-header">
-          Bienvenue sur l'application "Now We Eat" !
+          Home page, livre de recette
         </header>
        
       </div>
