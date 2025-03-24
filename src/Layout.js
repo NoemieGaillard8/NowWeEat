@@ -6,7 +6,7 @@ import './styles/layout.css'
 const Layout = ({ children }) => {
   return (
     <div className="layout-container">
-      <TopBar />
+      {/* <TopBar /> */}
       <div className="main-content">{children}</div>
       <BottomBar />
     </div>
