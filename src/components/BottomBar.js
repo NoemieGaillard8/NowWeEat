@@ -2,7 +2,7 @@ import React from 'react';
 import { FaBagShopping,FaBook,FaCalendar } from 'react-icons/fa6';
 import { TiFlash } from "react-icons/ti";
 import '../styles/components/bottombar.css';
-import { ReactComponent as AddIcon } from '../assets/addIcon.svg'; 
+import { ReactComponent as AddIcon } from '../assets/pagesIcons/addIcon.svg'; 
 
 const BottomBar = () => {
     return (
