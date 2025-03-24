@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaBagShopping,FaBook,FaCalendar,FaFire } from 'react-icons/fa6';
+import { FaBagShopping,FaBook,FaCalendar } from 'react-icons/fa6';
+import { TiFlash } from "react-icons/ti";
 import '../styles/components/bottombar.css';
 import { ReactComponent as AddIcon } from '../assets/addIcon.svg'; 
 
@@ -10,7 +11,7 @@ const BottomBar = () => {
         <div className="icon"> <FaBagShopping/> </div>
         <div className="icon">  <AddIcon width="30" height="30" /> </div>
         <div className="icon"> <FaCalendar/> </div>
-        <div className="icon"> <FaFire/></div>
+        <div className="icon"> <TiFlash/></div>
       </div>
     );
   };
