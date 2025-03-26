@@ -1,0 +1,29 @@
+@import "../../assets/colors.css";
+
+.search-bar-outlined {
+    display: flex;
+    align-items: center;
+    background-color: var(--GREY);
+    border-radius: 10px;
+    padding: 5px;
+    width: 100%;
+    
+  }
+  
+  .search-icon {
+    font-size: 15px;
+    margin-right: 3px;
+    color: var(--BLACK);
+  }
+  
+  .search-bar-outlined input {
+    border: none;
+    outline: none;
+    background-color: var(--GREY);
+    flex: 1;
+    font-family: 'Poppins' ;
+    font-weight: 300;
+    width: 100%;
+    min-width: 0;
+  }
+  
