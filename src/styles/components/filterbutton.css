@@ -1,0 +1,34 @@
+@import "../../assets/colors.css";
+
+.button-container {
+    display: inline-flex; 
+    padding-inline:8px;
+    max-height: 10px;
+    flex-direction: row;
+    padding-block: 2px;
+    align-items: center;
+    background-color: var(--GREY);
+    border-radius: 20px;
+    color:var(--BLACK);
+    width: auto;
+    font-size: 8px;
+    
+    white-space: nowrap;
+}
+
+.icon-ban {
+    height: 8px;
+    width: 8px;
+    margin-right: 3px;
+    color:var(--RED);
+}
+
+/* Handle le clique */
+.button-container.selected {
+    background-color: var(--ORANGE-VIF);
+    color: var(--WHITE);
+}
+.button-container.ban {
+    background-color: var(--RED-LIGHT);
+    color: var(--RED);
+}

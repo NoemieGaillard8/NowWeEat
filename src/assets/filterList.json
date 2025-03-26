@@ -1,0 +1,42 @@
+[ {
+      "name": "Sans fruits/légumes Frais",
+      "category": "allergie"
+    },
+    {
+      "name": "Végétarien",
+      "category": "préférence"
+    },
+    {
+      "name": "Four",
+      "category": "ustensils"
+    },
+    {
+      "name": "Airfryer",
+      "category": "ustensils"
+    },
+    
+    {
+      "name": "Œufs",
+      "category": "préférence"
+    },
+    {
+      "name": "Sans noix",
+      "category": "allergie"
+    },
+    {
+      "name": "Sans arachides",
+      "category": "allergie"
+    },
+    {
+      "name": "Sans gluten",
+      "category": "allergie"
+    },
+    {
+      "name": "Poisson",
+      "category": "préférence"
+    },
+    {
+      "name": "Sans lactose",
+      "category": "allergie"
+    }
+  ]

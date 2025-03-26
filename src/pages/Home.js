@@ -7,6 +7,7 @@ import '../styles/home.css'
 
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import CategorySlider from "../components/CategorySlider";
+import FilterSlider from "../components/FilterSlider";
 
 const Home = () => {
   const [recipes, setRecipes] = useState([]); 
@@ -62,9 +63,10 @@ const Home = () => {
       </div>
       
         <CategorySlider/>
+        <FilterSlider/>
       
       {/* Champ pour ajouter une recette */}
-      <div>
+      {/* <div>
         
         <input
           type="text"
@@ -80,7 +82,6 @@ const Home = () => {
        
       </div>
       <button onClick={handleAddRecipe}>Ajouter</button>
-      {/* Liste des recettes */}
       <ul>
         {recipes.map((recipe) => (
           <li key={recipe.id}>
@@ -88,7 +89,7 @@ const Home = () => {
             <button >❌</button>
           </li>
         ))}
-      </ul>
+      </ul> */}
     </div>
   );
 };

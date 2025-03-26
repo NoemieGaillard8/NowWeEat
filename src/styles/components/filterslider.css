@@ -1,0 +1,12 @@
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 5px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
