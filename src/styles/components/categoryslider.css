@@ -1,0 +1,176 @@
+@import "../../assets/colors.css";
+
+.global-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* padding-inline: 10px; */
+    overflow-x: hidden;
+}
+
+.image {
+    width: 30px;
+    min-height: 20px;
+    max-height: 20px;
+    object-fit: contain;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    margin-bottom: -5px;
+}
+.description {
+    font-size: 8px;
+    white-space: nowrap;
+    color: black;
+    transition: all 0.2s ease-in-out;
+}
+
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 5px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+.category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    padding-top: 5px;
+    overflow: visible;
+}
+
+.category-item.selected .description {
+    color: var(--ORANGE-VIF);
+}
+
+.category-item.selected .image {
+    transform: rotate(10deg) scale(1.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+.category-item.selected::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 25px;
+    height: 25px;
+    top: 1vh;
+    background-color: #FFBB7D;
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 1;
+    animation: expandCircle 0.3s ease-in-out;
+
+}
+
+.category-item::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+
+    background-color: #FFBB7D;
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0;
+    transform-origin: center;
+}
+
+/* Specifique Favoris */
+.image-favorite {
+    width: 30px;
+    min-height: 20px;
+    max-height: 20px;
+    object-fit: contain;
+    height: auto;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    margin-bottom: -5px;
+    filter: grayscale(100%);
+}
+
+.favorite-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    padding-top: 5px;
+    overflow: visible;
+    /* background-color: blue; */
+    margin-right: 5px;
+}
+
+.favorite-container.selected .description {
+    color: var(--ORANGE-VIF);
+    transition: all 0.2s ease-in-out;
+}
+
+.favorite-container.selected .image-favorite {
+    filter: grayscale(0%);
+    transition: filter 0.3s ease-in-out;
+    animation: bounce 0.4s ease-in-out;
+}
+
+/* Specifique Meal Image */
+.meal-image{
+    width: 30px;
+    min-height: 18px;
+    max-height: 18px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    object-fit: contain;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    margin-bottom: -5px;
+}
+.category-item.selected .meal-image {
+    transform: rotate(10deg) scale(1.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Keyframes */
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+
+    33% {
+        transform: scale(1.2);
+    }
+
+    66% {
+        transform: scale(0.8);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes expandCircle {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 0;
+        top: 5vh;
+    }
+
+    100% {
+        width: 25px;
+        height: 25px;
+        opacity: 1;
+    }
+}
