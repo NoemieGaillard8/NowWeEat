@@ -1,5 +1,6 @@
+@import "../assets/colors.css";
 .content {
-    background-color: #f8f9fa; 
+    background-color: var(--oRANGE-PECHE); 
     padding: 20px;
   }
   
@@ -9,4 +10,10 @@
     font-weight: bold;
     text-align: center;
   }
+
+ .filter-icon {
+  color: var(--ORANGE-VIF);
+  width: 10vw;
+  height: 10vh;
+ }
   

@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { getAllRecipes,addRecipe } from "../database/recipesdb";
 import { storage } from '../database/firebaseConfig';
+import SearchBar from '../components/SearchBar_temp';
+import { FaSliders } from "react-icons/fa6";
+import '../styles/home.css'
+
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import CategorySlider from "../components/CategorySlider";
 
 const Home = () => {
   const [recipes, setRecipes] = useState([]); 
@@ -13,7 +18,7 @@ const Home = () => {
   useEffect(() => {
     getAllRecipes().then((data) => {
       console.log("Données récupérées :", data);
-      setRecipes(data || []); // Assure que recipes est un tableau
+      setRecipes(data || []);
     });
     console.log("recipes",recipes);
   }, []);
@@ -50,9 +55,14 @@ const Home = () => {
   
 
   return (
-    <div className="home-container">
-      <h1>Mes Recettes</h1>
-
+    <div style={{padding:"3px" }}>
+      <div style={{width:"100%",display:"flex",flexDirection:"row",alignItems:"center",gap:"10px"}}>
+          <SearchBar/>
+          <FaSliders className="filter-icon"/>
+      </div>
+      
+        <CategorySlider/>
+      
       {/* Champ pour ajouter une recette */}
       <div>
         
